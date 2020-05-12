@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "./navbar.component";
-import Quicksort from "./quicksort.component";
+import Selectionsort from "./selectionsort.component";
 //import { Link } from "react-router-dom";
 import "./component-styles/sorting.css";
 
@@ -34,7 +34,7 @@ export default class Sorting extends Component {
             </div>
           </div>
           <div className="row quicksort">
-            <Quicksort />
+            <Selectionsort />
           </div>
         </div>
       </div>

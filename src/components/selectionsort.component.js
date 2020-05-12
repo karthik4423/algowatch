@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 //import { Link } from "react-router-dom";
-import "./component-styles/quicksort.css";
+import "./component-styles/slelectionsort.css";
 
 const defaultColor = "blue";
 const whileCompare = "red";
 const afterSort = "turquoise";
 const ANIMATION_SPEED_MS = 5;
-export default class Quicksort extends Component {
+export default class Selectionsort extends Component {
   constructor(props) {
     super(props);
     this.state = {
