@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import { Link } from "react-router-dom";
-import "./component-styles/slelectionsort.css";
+import "./component-styles/selectionsort.css";
 
 const defaultColor = "blue";
 const whileCompare = "red";
@@ -32,25 +32,13 @@ export default class Selectionsort extends Component {
       //console.log(temp);
       arraybars[min].style.height = arraybars[i].style.height;
       arraybars[i].style.height = temp;
-      this.changeColourBack(arraybars, min);
-      this.changeColourSorted(arraybars, i);
-    }, i * 20);
+    }, i * 800);
   }
   changeColour(arraybars, min, j) {
     setTimeout(() => {
-      arraybars[min].style.backgroundColor = whileCompare;
-      arraybars[j].style.backgroundColor = whileCompare;
-    }, j * ANIMATION_SPEED_MS);
-  }
-  changeColourBack(arraybars, min, j) {
-    setTimeout(() => {
-      arraybars[min].style.backgroundColor = defaultColor;
-    }, min * 20);
-  }
-  changeColourSorted(arraybars, i) {
-    setTimeout(() => {
-      arraybars[i].style.backgroundColor = afterSort;
-    }, i * 20);
+      arraybars[min].style.backgroundColor = "red";
+      arraybars[j].style.backgroundColor = "red";
+    }, j * 800);
   }
 
   selectionSort() {
@@ -64,14 +52,16 @@ export default class Selectionsort extends Component {
       var min = i;
       for (j = i; j < n; ++j) {
         if (arr[min] > arr[j]) {
-          //this.changeColour(arraybars, min, j);
           min = j;
+          this.changeColour(arraybars, min, j);
         }
       }
-      this.changeHeight(arraybars, min, i);
       var temp = arr[min];
       arr[min] = arr[i];
       arr[i] = temp;
+      this.changeHeight(arraybars, min, i);
+
+      //this.changeColourSorted(arraybars, i);
     }
     console.log("new array", arr);
   }

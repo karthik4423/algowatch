@@ -22,18 +22,18 @@ export default class Sorting extends Component {
               <p>
                 By definition, sorting means to arrange systematically in groups
                 or to separate according to type. Usually in Computer Science,
-                sorting is done in iterables, like arrays or lists. The
+                sorting is done on iterables, like arrays or lists. The
                 following are the most common sorting algorithms available.
               </p>
             </div>
             <div className="col-12">
               <ul>
-                <li>Quick Sort</li>
+                <li>Selection Sort</li>
                 <li>Bubble Sort</li>
               </ul>
             </div>
           </div>
-          <div className="row quicksort">
+          <div className="row selectionsort">
             <Selectionsort />
           </div>
         </div>
