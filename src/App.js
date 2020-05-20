@@ -3,9 +3,8 @@ import React from "react";
 import Sorting from "./components/sorting.component";
 import Home from "./components/home.component";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-{
-  /*import ExercisesList from "./components/exercises-list.component";*/
-}
+
+/*import ExercisesList from "./components/exercises-list.component";*/
 
 function App() {
   return (
